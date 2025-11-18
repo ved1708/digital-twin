@@ -1,0 +1,14 @@
+FROM tensorflow/tensorflow:2.13.0-gpu
+
+# Install Sionna and common packages
+RUN pip install sionna matplotlib jupyter ipykernel scipy numpy
+
+# Set working directory
+WORKDIR /workspace
+
+# Optional: Create a non-root user
+RUN useradd -m -u 1000 sionna_user
+USER sionna_user
+
+# Entry point
+CMD ["bash"]
