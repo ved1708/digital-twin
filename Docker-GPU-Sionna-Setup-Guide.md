@@ -8,6 +8,10 @@ This guide documents the complete process of setting up native Docker with NVIDI
 - Error: `could not select device driver "" with capabilities: [[gpu]]`
 - NVIDIA driver version: 570.172.08 available but not accessible to Docker
 
+### To Check Sionna, Mitsuba and dr. Jit version installed
+docker exec magical_margulis python -c "import sionna, drjit, mitsuba; print('Sionna:', sionna.__version__); print('Dr.Jit:', drjit.__version__); print('Mitsuba:', mitsuba.__version__)"
+
+
 ## Solution: Switch from Docker Desktop to Native Docker
 
 ### Step 1: Remove Docker Desktop
